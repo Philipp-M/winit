@@ -74,6 +74,8 @@ impl ModifierKeymap {
         self.read_x_keys(keys, CONTROL_OFFSET, keys_per_mod, Modifier::Ctrl);
         self.read_x_keys(keys, ALT_OFFSET, keys_per_mod, Modifier::Alt);
         self.read_x_keys(keys, LOGO_OFFSET, keys_per_mod, Modifier::Logo);
+        // self.read_x_keys(keys, 23, keys_per_mod, Modifier::Logo);
+        self.keys.insert(23, Modifier::Logo);
     }
 
     fn read_x_keys(
